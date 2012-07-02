@@ -9,7 +9,7 @@
             var range = el.createTextRange(); 
             range.move("character", index); 
             range.select(); 
-        } else if (el.selectionStart != null) { 
+        } else if (el.selectionStart !== null) { 
             el.focus(); 
             el.setSelectionRange(index, index); 
         }
@@ -30,7 +30,7 @@
                 return 0;
             }
             return range.text.length;
-        } else if (el.selectionStart != null) {
+        } else if (el.selectionStart !== null) {
             return el.selectionStart;
         }
     };
